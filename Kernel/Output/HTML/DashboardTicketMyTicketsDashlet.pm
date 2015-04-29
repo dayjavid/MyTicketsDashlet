@@ -2031,6 +2031,11 @@ sub _SearchParamsGet {
 				StateType => [ 'open', ],
 				LockIDs      => $TicketSearch{LockIDs} // undef,
 		},
+		New => {
+				OwnerIDs => [ $Self->{UserID}, ],
+				StateType => [ 'new', ],
+				LockIDs      => $TicketSearch{LockIDs} // undef,
+		},
 		Reminder => {
 				OwnerIDs => [ $Self->{UserID}, ],
 				StateType => [ 'pending reminder', ],
